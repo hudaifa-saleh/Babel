@@ -27,7 +27,7 @@ repos:
     hooks:
       - id: flake8
         language_version: python3.11
-        args: [ --max-line-length=130, --ignore=E402,E501 ]
+        args: [ --max-line-length=130 ]
         stages: [ commit, push ]
 
 #  - repo: https://github.com/PyCQA/bandit
