@@ -26,8 +26,6 @@ known_first_party = [
 skip = ["venv/"]
 skip_glob = ["**/migrations/*.py"]
 
-[flake8]
-max-line-length = 130
 
 # [tool.mypy]
 # check_untyped_defs = true
