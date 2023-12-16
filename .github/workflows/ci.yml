@@ -1,11 +1,11 @@
-name: CI Runner
+name: Django CI
 on:
   - push
   - pull_request
 
 jobs:
   test:
-    name: Run DJ Test
+    name: Django Tests
     runs-on: ubuntu-22.04
 
     env:
