@@ -26,12 +26,8 @@ known_first_party = [
 skip = ["venv/"]
 skip_glob = ["**/migrations/*.py"]
 
-[tool.flake8]
+[flake8]
 max-line-length = 130
-exclude = [
-    ".git",
-    "__pycache__"
-]
 
 # [tool.mypy]
 # check_untyped_defs = true
