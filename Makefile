@@ -12,3 +12,6 @@ graph:
 
 migration:
 	python3 manage.py makemigrations && python3 manage.py migrate
+
+coverage:
+	pytest --cov=powerhouse --migrations -n 2 --dist loadfile

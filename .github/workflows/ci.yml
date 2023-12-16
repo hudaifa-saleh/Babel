@@ -32,5 +32,5 @@ jobs:
       - name: Install Python packages
         run: pip install -r requirements/requirements.txt -r requirements/requirements-dev.txt
 
-#      - name: Test Cov
-#        run: make coverage
+      - name: Test Cov
+        run: make coverage
