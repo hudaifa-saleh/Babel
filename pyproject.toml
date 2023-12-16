@@ -9,10 +9,22 @@ omit = [
 show_missing = true
 skip_covered = true
 
+# ==== black ====
+[tool.black]
+line-length = 130
+target-version = ['py311']
+
+
+# ==== isort ====
 [tool.isort]
 profile = "black"
-src_paths = ["powerhouse"]
-
+line_length = 130
+known_first_party = [
+    "powerhouse",
+    "config",
+]
+skip = ["venv/"]
+skip_glob = ["**/migrations/*.py"]
 # [tool.mypy]
 # check_untyped_defs = true
 #
