@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     # 3rd Django Apps
     "django_extensions",
     # Local Django Apps
+    "powerhouse.accounts",
 ]
 
 MIDDLEWARE = [
