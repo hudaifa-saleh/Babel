@@ -33,4 +33,6 @@ jobs:
         run: pip install -r requirements/requirements.txt -r requirements/requirements-dev.txt
 
       - name: Test Cov
-        run: make coverage
+        run: |
+          make pip-install |
+          make coverage
