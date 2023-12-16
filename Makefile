@@ -6,3 +6,6 @@ pip-dev:
 
 graph:
 	python3 manage.py graph_models
+
+migration:
+	python3 manage.py makemigrations && python3 manage.py migrate
