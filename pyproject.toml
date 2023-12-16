@@ -27,6 +27,14 @@ skip = ["venv/"]
 skip_glob = ["**/migrations/*.py"]
 
 
+[tool.flake8]
+max-line-length = 130
+exclude = [
+    ".git",
+    "__pycache__",
+    "venv",
+    "*/migrations/*"
+]
 # [tool.mypy]
 # check_untyped_defs = true
 #
