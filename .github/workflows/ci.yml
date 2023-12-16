@@ -34,5 +34,5 @@ jobs:
 
       - name: Test Cov
         run: |
-          make pip-install |
+          make migration |
           make coverage
