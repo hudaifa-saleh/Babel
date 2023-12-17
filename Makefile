@@ -21,3 +21,6 @@ run:
 
 coverage:
 	pytest --cov=powerhouse --migrations -n 2 --dist loadfile
+
+py_cov:
+	coverage run -m pytest && coverage html
