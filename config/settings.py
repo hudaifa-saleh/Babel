@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "django_extensions",
     # Local Django Apps
     "powerhouse.accounts",
+    "powerhouse.moments",
 ]
 
 MIDDLEWARE = [
