@@ -1,6 +1,6 @@
 import pytest
-from djoser.conf import User
 
+from powerhouse.accounts.models import User
 from powerhouse.moments.models import Moment
 
 
