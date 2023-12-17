@@ -13,5 +13,11 @@ graph:
 migration:
 	python3 manage.py makemigrations && python3 manage.py migrate
 
+create:
+	python3 manage.py createsuperuser
+
+run:
+	python3 manage.py runserver localhost:8000
+
 coverage:
 	pytest --cov=powerhouse --migrations -n 2 --dist loadfile
