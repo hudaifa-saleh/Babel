@@ -28,7 +28,7 @@ skip_glob = ["**/migrations/*.py"]
 
 
 [tool.flake8]
-max-line-length = 130
+max-line-length = 140
 exclude = [
     ".git",
     "__pycache__",
