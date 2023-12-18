@@ -4,7 +4,7 @@ from django.utils import timezone
 
 
 class Moment(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="moments")
     content = models.TextField(max_length=150, blank=True, null=True)
     image = models.ImageField(upload_to="moments/", blank=True, null=True)
     timestamp = models.DateTimeField(default=timezone.now)
