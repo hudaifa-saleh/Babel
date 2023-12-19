@@ -24,3 +24,6 @@ coverage:
 
 py_cov:
 	coverage run -m pytest && coverage html
+
+black:
+	python3 -m black .
