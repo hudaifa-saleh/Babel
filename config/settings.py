@@ -83,7 +83,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
-
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 AUTH_USER_MODEL = "accounts.User"
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
@@ -91,7 +91,11 @@ AUTHENTICATION_BACKENDS = [
 ]
 SITE_ID = 1
 
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_SESSION_REMEMBER = True
+LOGIN_REDIRECT_URL = "home"
+ACCOUNT_LOGOUT_REDIRECT_URL = "home"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
