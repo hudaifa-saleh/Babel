@@ -24,9 +24,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 3rd Django Apps
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
     "django_extensions",
     # Local Django Apps
     "powerhouse.accounts",
