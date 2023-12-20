@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from powerhouse.accounts.views import HomePageView
+from babel.accounts.views import HomePageView
 
 urlpatterns = [
     path("admin/", admin.site.urls),

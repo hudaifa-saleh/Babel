@@ -1,6 +1,6 @@
 import factory
 
-from powerhouse.accounts.models import User
+from babel.accounts.models import User
 
 
 class AccountFactory(factory.django.DjangoModelFactory):

@@ -3,7 +3,7 @@ from pathlib import Path
 import environ
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-APPS_DIR = BASE_DIR / "powerhouse"
+APPS_DIR = BASE_DIR / "babel"
 env = environ.Env()
 env.read_env(str(BASE_DIR / ".env"))
 
@@ -26,8 +26,8 @@ INSTALLED_APPS = [
     # 3rd Django Apps
     "django_extensions",
     # Local Django Apps
-    "powerhouse.accounts",
-    "powerhouse.moments",
+    "babel.accounts",
+    "babel.moments",
 ]
 
 MIDDLEWARE = [

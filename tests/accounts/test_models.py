@@ -1,4 +1,4 @@
-from powerhouse.accounts.models import User
+from babel.accounts.models import User
 
 
 class TestUser:

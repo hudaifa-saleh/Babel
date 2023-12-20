@@ -1,5 +1,5 @@
-from powerhouse.accounts.models import User
-from powerhouse.moments.models import Moment
+from babel.accounts.models import User
+from babel.moments.models import Moment
 
 
 class TestMoment:

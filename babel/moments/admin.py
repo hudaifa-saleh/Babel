@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from powerhouse.moments.models import Moment
+from babel.moments.models import Moment
 
 
 @admin.register(Moment)

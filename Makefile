@@ -20,7 +20,7 @@ run:
 	python3 manage.py runserver localhost:8000
 
 coverage:
-	pytest --cov=powerhouse --migrations -n 2 --dist loadfile
+	pytest --cov=babel --migrations -n 2 --dist loadfile
 
 py_cov:
 	coverage run -m pytest && coverage html

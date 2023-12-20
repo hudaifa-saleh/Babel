@@ -20,7 +20,7 @@ target-version = ['py311']
 profile = "black"
 line_length = 130
 known_first_party = [
-    "powerhouse",
+    "babel",
     "config",
 ]
 skip = ["venv/"]
@@ -74,5 +74,5 @@ filterwarnings = [
 # #    ignore:.*The providing_args argument is deprecated\..*:DeprecationWarning
 # #    ignore:.*The providing_args argument is deprecated\..*:PendingDeprecationWarning
 testpaths = [
-    "powerhouse",
+    "babel",
 ]
