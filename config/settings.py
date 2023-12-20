@@ -24,9 +24,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 3rd Django Apps
-    # 'allauth',
-    # 'allauth.account',
-    # 'allauth.socialaccount',
     "django_extensions",
     # Local Django Apps
     "powerhouse.accounts",
@@ -41,7 +38,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "allauth.account.middleware.AccountMiddleware",  # django-allauth
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -56,7 +52,6 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "django.template.context_processors.request",  # djagno-allauth
             ],
         },
     },
@@ -85,17 +80,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 AUTH_USER_MODEL = "accounts.User"
-AUTHENTICATION_BACKENDS = [
-    "django.contrib.auth.backends.ModelBackend",
-    "allauth.account.auth_backends.AuthenticationBackend",
-]
-SITE_ID = 1
-
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
-ACCOUNT_AUTHENTICATION_METHOD = "username_email"
-ACCOUNT_SESSION_REMEMBER = True
-LOGIN_REDIRECT_URL = "home"
-ACCOUNT_LOGOUT_REDIRECT_URL = "home"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
