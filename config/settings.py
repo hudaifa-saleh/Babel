@@ -25,8 +25,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # 3rd Django Apps
     "rest_framework",
-    "rest_framework.authtoken",
     "djoser",
+    "rest_framework_simplejwt",
     "django_extensions",
     # Local Django Apps
     "babel.accounts",
@@ -86,7 +86,7 @@ AUTH_USER_MODEL = "accounts.User"
 
 # Django restframework
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework.authentication.TokenAuthentication",),
+    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
 }
 
 DJOSER = {
