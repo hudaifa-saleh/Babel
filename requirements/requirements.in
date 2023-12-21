@@ -1,7 +1,7 @@
 # Django
 # ------------------------------------------------------------------------------
 Django==5.0
-# django-allauth==0.59.0
+djoser==2.2.2
 django-environ==0.10.0
 django-extensions==3.2.3
 django-debug-toolbar==4.2.0
