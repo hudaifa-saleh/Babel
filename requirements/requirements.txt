@@ -14,22 +14,46 @@ attrs==23.1.0
     # via aiohttp
 black==23.12.0
     # via -r requirements/requirements.in
+certifi==2023.11.17
+    # via requests
+cffi==1.16.0
+    # via cryptography
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via black
 coverage[toml]==7.2.7
     # via
     #   -r requirements/requirements.in
     #   pytest-cov
+cryptography==41.0.7
+    # via social-auth-core
+defusedxml==0.8.0rc2
+    # via
+    #   python3-openid
+    #   social-auth-core
 django==5.0
     # via
     #   -r requirements/requirements.in
     #   django-debug-toolbar
     #   django-extensions
+    #   djangorestframework
+    #   djangorestframework-simplejwt
+    #   djoser
+    #   social-auth-app-django
 django-debug-toolbar==4.2.0
     # via -r requirements/requirements.in
 django-environ==0.10.0
     # via -r requirements/requirements.in
 django-extensions==3.2.3
+    # via -r requirements/requirements.in
+django-templated-mail==1.1.1
+    # via djoser
+djangorestframework==3.14.0
+    # via djangorestframework-simplejwt
+djangorestframework-simplejwt==5.3.1
+    # via djoser
+djoser==2.2.2
     # via -r requirements/requirements.in
 execnet==2.0.2
     # via pytest-xdist
@@ -44,7 +68,9 @@ frozenlist==1.4.1
     #   aiohttp
     #   aiosignal
 idna==3.6
-    # via yarl
+    # via
+    #   requests
+    #   yarl
 iniconfig==2.0.0
     # via pytest
 mccabe==0.7.0
@@ -55,6 +81,10 @@ multidict==6.0.4
     #   yarl
 mypy-extensions==1.0.0
     # via black
+oauthlib==3.2.2
+    # via
+    #   requests-oauthlib
+    #   social-auth-core
 packaging==23.2
     # via
     #   black
@@ -67,8 +97,14 @@ pluggy==1.3.0
     # via pytest
 pycodestyle==2.11.1
     # via flake8
+pycparser==2.21
+    # via cffi
 pyflakes==3.1.0
     # via flake8
+pyjwt==2.8.0
+    # via
+    #   djangorestframework-simplejwt
+    #   social-auth-core
 pytest==7.4.3
     # via
     #   pytest-cov
@@ -87,11 +123,27 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/requirements.in
     #   faker
+python3-openid==3.2.0
+    # via social-auth-core
+pytz==2023.3.post1
+    # via djangorestframework
+requests==2.31.0
+    # via
+    #   requests-oauthlib
+    #   social-auth-core
+requests-oauthlib==1.3.1
+    # via social-auth-core
 six==1.16.0
     # via python-dateutil
+social-auth-app-django==5.4.0
+    # via djoser
+social-auth-core==4.5.1
+    # via social-auth-app-django
 sqlparse==0.4.4
     # via
     #   django
     #   django-debug-toolbar
+urllib3==2.1.0
+    # via requests
 yarl==1.9.4
     # via aiohttp
