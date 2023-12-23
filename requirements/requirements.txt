@@ -27,7 +27,9 @@ coverage[toml]==7.2.7
     #   -r requirements/requirements.in
     #   pytest-cov
 cryptography==41.0.7
-    # via social-auth-core
+    # via
+    #   pyjwt
+    #   social-auth-core
 defusedxml==0.8.0rc2
     # via
     #   python3-openid
@@ -35,12 +37,15 @@ defusedxml==0.8.0rc2
 django==5.0
     # via
     #   -r requirements/requirements.in
+    #   django-allauth
     #   django-debug-toolbar
     #   django-extensions
     #   djangorestframework
     #   djangorestframework-simplejwt
     #   djoser
     #   social-auth-app-django
+django-allauth==0.59.0
+    # via -r requirements/requirements.in
 django-debug-toolbar==4.2.0
     # via -r requirements/requirements.in
 django-environ==0.10.0
@@ -105,9 +110,11 @@ pycparser==2.21
     # via cffi
 pyflakes==3.1.0
     # via flake8
-pyjwt==2.8.0
+pyjwt[crypto]==2.8.0
     # via
+    #   django-allauth
     #   djangorestframework-simplejwt
+    #   pyjwt
     #   social-auth-core
 pytest==7.4.3
     # via
@@ -128,15 +135,20 @@ python-dateutil==2.8.2
     #   -r requirements/requirements.in
     #   faker
 python3-openid==3.2.0
-    # via social-auth-core
+    # via
+    #   django-allauth
+    #   social-auth-core
 pytz==2023.3.post1
     # via djangorestframework
 requests==2.31.0
     # via
+    #   django-allauth
     #   requests-oauthlib
     #   social-auth-core
 requests-oauthlib==1.3.1
-    # via social-auth-core
+    # via
+    #   django-allauth
+    #   social-auth-core
 six==1.16.0
     # via python-dateutil
 social-auth-app-django==5.4.0
