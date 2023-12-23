@@ -100,6 +100,8 @@ ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 # ACCOUNT_UNIQUE_EMAIL = True
 
+LOGIN_REDIRECT_URL = "home"
+ACCOUNT_LOGOUT_REDIRECT_URL = "home"
 # Internationalization
 # ---------------------------------------------------------------------------------------------
 LANGUAGE_CODE = "en-us"
