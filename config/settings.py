@@ -24,9 +24,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # 3rd Django Apps
-    "rest_framework",
-    "djoser",
-    "rest_framework_simplejwt",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
     "django_extensions",
     # Local Django Apps
     "babel.accounts",
@@ -41,6 +41,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # Add the account middleware:
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -55,6 +57,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                # `allauth` needs this from django
+                "django.template.context_processors.request",
             ],
         },
     },
@@ -81,22 +85,16 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+]
+
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 AUTH_USER_MODEL = "accounts.User"
 
-# Django restframework
-REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
-}
+SITE_ID = 1
 
-DJOSER = {
-    "PASSWORD_RESET_CONFIRM_URL": "#/password/reset/confirm/{uid}/{token}",
-    "USERNAME_RESET_CONFIRM_URL": "#/username/reset/confirm/{uid}/{token}",
-    "ACTIVATION_URL": "#/activate/{uid}/{token}",
-    "SEND_ACTIVATION_EMAIL": True,
-    "SEND_CONFIRMATION_EMAIL": True,
-    "SERIALIZERS": {},
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
