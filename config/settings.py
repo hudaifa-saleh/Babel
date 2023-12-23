@@ -23,12 +23,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # 3rd Django Apps
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "django_extensions",
-    # Local Django Apps
     "babel.accounts",
     "babel.moments",
 ]
