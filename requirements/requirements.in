@@ -6,6 +6,7 @@ django-extensions==3.2.3
 django-debug-toolbar==4.2.0
 python-dateutil==2.8.2
 django-allauth==0.59.0
+django-crispy-forms==2.1
 
 
 # Django API
