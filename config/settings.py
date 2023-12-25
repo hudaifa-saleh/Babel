@@ -81,6 +81,13 @@ AUTH_PASSWORD_VALIDATORS = [
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 AUTH_USER_MODEL = "accounts.User"
 
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ]
+}
+
 # Internationalization
 # ---------------------------------------------------------------------------------------------
 LANGUAGE_CODE = "en-us"
