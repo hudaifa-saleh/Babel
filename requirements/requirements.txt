@@ -27,45 +27,25 @@ coverage[toml]==7.2.7
     #   -r requirements/requirements.in
     #   pytest-cov
 cryptography==41.0.7
-    # via
-    #   pyjwt
-    #   social-auth-core
-defusedxml==0.8.0rc2
-    # via
-    #   python3-openid
-    #   social-auth-core
+    # via jwcrypto
+deprecated==1.2.14
+    # via jwcrypto
 django==5.0
     # via
     #   -r requirements/requirements.in
-    #   django-allauth
-    #   django-crispy-forms
     #   django-debug-toolbar
     #   django-extensions
+    #   django-oauth-toolkit
     #   djangorestframework
-    #   djangorestframework-simplejwt
-    #   djoser
-    #   social-auth-app-django
-django-allauth==0.59.0
-    # via -r requirements/requirements.in
-django-crispy-forms==2.1
-    # via -r requirements/requirements.in
 django-debug-toolbar==4.2.0
     # via -r requirements/requirements.in
 django-environ==0.10.0
     # via -r requirements/requirements.in
 django-extensions==3.2.3
     # via -r requirements/requirements.in
-django-templated-mail==1.1.1
-    # via djoser
+django-oauth-toolkit==2.3.0
+    # via -r requirements/requirements.in
 djangorestframework==3.14.0
-    # via
-    #   -r requirements/requirements.in
-    #   djangorestframework-simplejwt
-djangorestframework-simplejwt==5.3.1
-    # via
-    #   -r requirements/requirements.in
-    #   djoser
-djoser==2.2.2
     # via -r requirements/requirements.in
 execnet==2.0.2
     # via pytest-xdist
@@ -85,6 +65,8 @@ idna==3.6
     #   yarl
 iniconfig==2.0.0
     # via pytest
+jwcrypto==1.5.0
+    # via django-oauth-toolkit
 mccabe==0.7.0
     # via flake8
 multidict==6.0.4
@@ -94,9 +76,7 @@ multidict==6.0.4
 mypy-extensions==1.0.0
     # via black
 oauthlib==3.2.2
-    # via
-    #   requests-oauthlib
-    #   social-auth-core
+    # via django-oauth-toolkit
 packaging==23.2
     # via
     #   black
@@ -113,12 +93,6 @@ pycparser==2.21
     # via cffi
 pyflakes==3.1.0
     # via flake8
-pyjwt[crypto]==2.8.0
-    # via
-    #   django-allauth
-    #   djangorestframework-simplejwt
-    #   pyjwt
-    #   social-auth-core
 pytest==7.4.3
     # via
     #   pytest-cov
@@ -137,32 +111,19 @@ python-dateutil==2.8.2
     # via
     #   -r requirements/requirements.in
     #   faker
-python3-openid==3.2.0
-    # via
-    #   django-allauth
-    #   social-auth-core
 pytz==2023.3.post1
     # via djangorestframework
 requests==2.31.0
-    # via
-    #   django-allauth
-    #   requests-oauthlib
-    #   social-auth-core
-requests-oauthlib==1.3.1
-    # via
-    #   django-allauth
-    #   social-auth-core
+    # via django-oauth-toolkit
 six==1.16.0
     # via python-dateutil
-social-auth-app-django==5.4.0
-    # via djoser
-social-auth-core==4.5.1
-    # via social-auth-app-django
 sqlparse==0.4.4
     # via
     #   django
     #   django-debug-toolbar
 urllib3==2.1.0
     # via requests
+wrapt==1.16.0
+    # via deprecated
 yarl==1.9.4
     # via aiohttp
